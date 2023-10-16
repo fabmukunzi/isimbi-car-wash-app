@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.classic{
+    background-image: url('../images/Rectangle\ 5338.png');
+    background-size: cover;
+    height: 100vh;
+}
+
+.bg-1{
+    background-image: url('../images/home1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
