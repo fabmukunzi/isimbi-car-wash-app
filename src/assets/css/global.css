@@ -2,14 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-.classic{
-    background-image: url('../images/Rectangle\ 5338.png');
-    background-size: cover;
-    height: 100vh;
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins/Poppins-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
 }
 
-.bg-1{
-    background-image: url('../images/home1.png');
-    background-size: contain;
-    background-repeat: no-repeat;
+/* Poppins Bold */
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins/Poppins-Bold.ttf') format('ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+.classic {
+  background-image: url('../images/Rectangle\ 5338.png');
+  background-size: cover;
+  height: 100vh;
+}
+
+.bg-1 {
+  background-image: url('../images/home1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
 }
