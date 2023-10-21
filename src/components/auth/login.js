@@ -1,9 +1,16 @@
 import { Button, Form, Input, Typography } from 'antd';
 import { Link } from 'react-router-dom';
 import googleIcon from '../../assets/images/Google.svg';
+import { useDispatch, useSelector } from 'react-redux';
+import { login } from '../../features/auth/login';
 
 const Login = () => {
   const { Text } = Typography;
+  const dispatch = useDispatch();
+  const {isLoading}=useSelector((state)=>state.login)
+  const onFinish = async (values) => {
+    await dispatch(login(values));
+  };
   return (
     <div className="classic">
       <div className="flex backdrop-blur-md h-screen py-28 flex-col items-center gap-6">
@@ -14,14 +21,14 @@ const Login = () => {
         <Form
           name="basic"
           initialValues={{ remember: true }}
-          // onFinish={onFinish}
+          onFinish={onFinish}
           // onFinishFailed={onFinishFailed}
           layout="vertical"
           autoComplete="on"
           className="flex items-center flex-col"
         >
           <Form.Item
-            label="Email"
+            // label="Email"
             name="email"
             rules={[
               { type: 'email', message: 'Please input a valid email!' },
@@ -32,7 +39,7 @@ const Login = () => {
           </Form.Item>
 
           <Form.Item
-            label="Password"
+            // label="Password"
             name="password"
             rules={[{ required: true, message: 'Please input your password!' }]}
           >
@@ -48,7 +55,7 @@ const Login = () => {
               className="rounded-lg w-72 h-10 bg-blue-500 font-bold"
               type="primary"
               htmlType="submit"
-              // loading={isLoading}
+              loading={isLoading}
               // onClick={() => router.push('/dashboard')}
             >
               Login

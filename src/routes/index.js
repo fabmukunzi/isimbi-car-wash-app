@@ -4,6 +4,8 @@ import HomePage from '../pages/HomePage';
 import Signup from '../components/auth/signup';
 import AppLayout from '../layouts/AppLayout';
 import Bookings from '../pages/Bookings';
+import BookWash from '../pages/BookWash';
+import Menu from '../components/menu';
 
 const AppRoutes = () => {
   return (
@@ -13,6 +15,8 @@ const AppRoutes = () => {
       <Route element={<AppLayout />}>
         <Route path="/" element={<HomePage />} />
         <Route path="/bookings" element={<Bookings />} />
+        <Route path="/book" element={<BookWash />} />
+        {/* <Route path="/:item" element={<Menu />} /> */}
       </Route>
     </Routes>
   );

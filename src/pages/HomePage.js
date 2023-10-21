@@ -1,7 +1,7 @@
 import { Button, Typography } from 'antd';
 import React, { useState } from 'react';
 import { formatDate } from '../utils/formatDate';
-import smallCar from '../assets/images/small.svg';
+import smallCar from '../assets/images/Vector.svg';
 import semitrack from '../assets/images/semi truck.svg';
 import buses from '../assets/images/buses.svg';
 import track from '../assets/images/track.svg';
@@ -20,18 +20,7 @@ const HomePage = () => {
     { name: 'Semi-Truck', image: semitrack },
   ];
   return (
-    <div className="mx-6 pb-16">
-      <div className="flex justify-between items-center my-4">
-        <Text className="text-xl font-bold text-primary">K CAR WASH</Text>
-        {/* <img
-      alt="default profile"
-      src={profile}
-      className="h-10 w-10 rounded-full"
-    /> */}
-        <Link to="/login" className="font-bold">
-          Login
-        </Link>
-      </div>
+    <div className="mx-4 pb-16">
       <div className="flex justify-between items-center">
         <Text className="font-bold">
           Hello There! <br />
@@ -86,7 +75,7 @@ const HomePage = () => {
                     </Text>
                   </div>
                   <Button className="bg-primary border-none text-white" block>
-                    Book
+                    <Link to="/book">Book</Link>
                   </Button>
                 </div>
               </div>
